@@ -101,6 +101,7 @@ npm run build
 ```
 
 The build command does 3 things:
+
 1. Transpiles all the code into an index.html, app.[hash].js and app.[hash].css files and puts it in /public directory.
 1. Copies the static directory content into the /public directory.
 1. Builds the docker image which serves the content of the /public directory.
