@@ -33,14 +33,30 @@ class BaseService {
     });
   }
 
+  /**
+   * Makes an http request.
+   * @param {string} action The resource action, ex. get, query, save, etc.
+   * @param {string|object} [idOrQuery={}] The ID of the object to pass with the request or the query object.
+   * @param {object} [options={}] Extra query options to pass with the request
+   * @return {Promise} The response data
+   */
   request(action, idOrQuery = {}, options = {}) {
-    return self.$q((resolve, reject) => this.resource[action](Object.assign(options, this.formatId(idOrQuery)), resolve, reject));
+    return self.$q((resolve, reject) => this.resource[action](Object.assign(options, this.parseQuery(idOrQuery)), resolve, reject));
   }
 
-  formatId(idOrObject) {
+  /**
+   * If a string is provided returns an object with an id property equal to the provided string, otherwise returns the passed object as it is.
+   * @param {string|object} idOrObject The id id string or the query object
+   * @return {object} The query object
+   */
+  parseQuery(idOrObject) {
     return typeof idOrObject === 'string' ? {id: idOrObject} : idOrObject;
   }
 
+  /**
+   * Returns the API URL
+   * @return {string}
+   */
   getAPIUrl() {
     return API_URL;
   }
