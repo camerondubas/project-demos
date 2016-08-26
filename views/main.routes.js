@@ -4,5 +4,7 @@ export default /* @ngInject */ $stateProvider =>
   $stateProvider
     .state('app.landing', {
       url: '/',
+      controller: 'MainController',
+      controllerAs: 'mainCtrl',
       templateUrl
     });

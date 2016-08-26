@@ -1,7 +1,7 @@
-export default /* @ngInject */ ($urlRouterProvider, $locationProvider, $stateProvider) => {
-  $locationProvider.html5Mode(true);
-
+export default /* @ngInject */ ($urlRouterProvider, $locationProvider, $resourceProvider, $stateProvider) => {
   $urlRouterProvider.otherwise('/');
+  $locationProvider.html5Mode(true);
+  $resourceProvider.defaults.withCredentials = true;
 
   $stateProvider
     .state('app', {
