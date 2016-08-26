@@ -60,8 +60,8 @@ class PostService extends BaseService {
         postId: '@postId'
       }
       actions: {
-        addAuthor: {method: 'POST', url: this.getAPIUrl() + '/posts/:postId/author'},
-        queryAuthors: {method: 'GET', isArray: true, url: this.getAPIUrl() + '/posts/:postId/author'}
+        addAuthor: {method: 'POST', path: '/author'},
+        queryAuthors: {method: 'GET', isArray: true, path: '/author'}
       }
     };
     super('/posts/:postId', self, options);
