@@ -1,7 +1,8 @@
-export default /* @ngInject */ $stateProvider => {
+import templateUrl from './landing.html';
+
+export default /* @ngInject */ $stateProvider =>
   $stateProvider
     .state('app.landing', {
       url: '/',
-      template: require('./landing.html')
+      templateUrl
     });
-};

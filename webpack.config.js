@@ -33,8 +33,6 @@ function buildConfig(entry, outputPath, publicPath, proxy) {
         loader: "eslint-loader",
         exclude: /node_modules/
       }],
-      noParse: /node_modules\/video.js\/dist\/video.js/, // Removes "Pre-Built JS File" Warning. https://github.com/webpack/webpack/issues/1617
-
       // Loaders: http://webpack.github.io/docs/configuration.html#module-loaders
       loaders: [
         {
@@ -51,14 +49,9 @@ function buildConfig(entry, outputPath, publicPath, proxy) {
           loader: 'file-loader?name=icons/[name].[ext]'
         },
         {
-          test: /\.template\.html$/,
-          loader: 'ngtemplate',
-          exclude: /(style|static)/
-        },
-        {
           test: /\.html$/,
-          loader: 'html-loader',
-          exclude: /(style|static)/
+          loaders: ['ngtemplate', 'html-loader'],
+          exclude: /(static)/
         },
         {
           test: /\.(png|jpg|gif)$/,

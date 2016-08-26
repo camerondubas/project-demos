@@ -6,6 +6,6 @@ import uirouter from 'angular-ui-router';
 import routing from './main.routes';
 
 export default angular.module('app.main', [uirouter])
-.config(routing)
+  .config(routing)
   .name;
 
