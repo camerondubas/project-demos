@@ -2,12 +2,15 @@
 import * as angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-// Local
-import routing from './main.routes';
-import MainController from './main.controller';
+// Subviews
+import landing from './landing';
+import posts from './posts';
 
-export default angular.module('app.main', [uirouter])
-  .config(routing)
-  .controller('MainController', MainController)
+export default angular.module('app.views', [
+  uirouter,
+
+  landing,
+  posts
+])
   .name;
 

@@ -10,10 +10,14 @@ import services from './services';
 import views from './views';
 
 // Local
-import routing from './app.config';
+import config from './app.config';
+import routing from './app.routes';
 
 // Static
 import './static';
+
+// Styles
+import './ui/style.scss';
 
 angular.module('app',
   [
@@ -23,4 +27,5 @@ angular.module('app',
     services,
     views
   ])
-  .config(routing);
+.config(config)
+.config(routing);

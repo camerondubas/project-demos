@@ -55,7 +55,7 @@ class BaseService {
 
   /**
    * Returns the API URL
-   * @return {string}
+   * @return {string} API_URL
    */
   getAPIUrl() {
     return API_URL;

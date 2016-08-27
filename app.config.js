@@ -1,12 +1,5 @@
-export default /* @ngInject */ ($urlRouterProvider, $locationProvider, $resourceProvider, $stateProvider) => {
-  $urlRouterProvider.otherwise('/');
+export default /* @ngInject */ ($urlRouterProvider, $locationProvider, $resourceProvider) => {
   $locationProvider.html5Mode(true);
+  $urlRouterProvider.otherwise('/');
   $resourceProvider.defaults.withCredentials = true;
-
-  $stateProvider
-    .state('app', {
-      url: '',
-      abstract: true,
-      template: '<ui-view></ui-view>'
-    });
 };

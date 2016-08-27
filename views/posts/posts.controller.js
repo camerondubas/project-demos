@@ -1,6 +1,6 @@
 let self = {};
 
-export default class MainController {
+export default class PostsController {
   /* @ngInject */
   constructor(postService) {
     self.postService = postService;
