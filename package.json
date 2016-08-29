@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter-project",
+  "name": "project-demos",
   "license": "MIT",
   "private": false,
   "version": "0.0.1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/camerondubas/angular-starter-project.git"
+    "url": "https://github.com/camerondubas/project-demos.git"
   },
   "eslintConfig": {
     "extends": "google",
