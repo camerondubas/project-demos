@@ -1,8 +1,19 @@
 .cd-tile {
   padding: $unit;
   color: #fff;
-  width: calc(100%/3);
+  width: 100%;
+  height: 150px;
   float: left;
+
+  @media (min-width: 500px) {
+    height:150px;
+    width: calc(100%/2);
+  }
+
+  @media (min-width: 800px) {
+    height:150px;
+    width: calc(100%/3);
+  }
 }
 
 .cd-tile__container {
@@ -11,6 +22,7 @@
   box-shadow: $shadow-1;
   cursor: pointer;
   transition: all .2s;
+  height: 100%;
 
   &:hover {
     box-shadow: $shadow-2;

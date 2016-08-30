@@ -19,6 +19,12 @@ p, li {
   font-size:12px;
 }
 
+.cd-container {
+  width: calc(100% - 60px);
+  max-width:960px;
+  margin: 0 auto;
+}
+
 @import "navbar/navbar";
 @import "demo-container/demo-container";
 @import "form/form";

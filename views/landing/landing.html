@@ -1,8 +1,11 @@
-<cd-tile
-    ng-repeat="project in landingCtrl.projects"
-    color="{{project.color}}"
-    title="{{project.title}}"
-    description="{{project.description}}"
-    ui-sref="{{project.sref}}">
-</cd-tile>
+
+<div class="cd-container">
+  <cd-tile
+      ng-repeat="project in landingCtrl.projects"
+      color="{{project.color}}"
+      title="{{project.title}}"
+      description="{{project.description}}"
+      ui-sref="{{project.sref}}">
+  </cd-tile>
+</div>
 
