@@ -6,7 +6,7 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --inline --progress --port=8080",
-    "build": "webpack --config --bail -p --progress --production && docker build -t user/image:version ."
+    "build": "webpack --config --bail -p --progress --production && node server.js"
   },
   "repository": {
     "type": "git",
