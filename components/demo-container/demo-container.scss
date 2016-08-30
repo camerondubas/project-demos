@@ -1,0 +1,17 @@
+.cd-demo-container {
+  background: #fff;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: $shadow-1;
+
+  h2 {
+    margin-bottom:$unit;
+    font-size:24px;
+  }
+  p, ul{
+    margin-bottom:$unit*2;
+  }
+
+}

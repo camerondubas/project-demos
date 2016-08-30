@@ -1,0 +1,28 @@
+.cd-tile {
+  padding: $unit;
+  color: #fff;
+  width: calc(100%/3);
+  float: left;
+}
+
+.cd-tile__container {
+  padding: $unit;
+  background: #000;
+  box-shadow: $shadow-1;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    box-shadow: $shadow-2;
+  }
+}
+
+.cd-tile__header {
+  font-size: 24px;
+  margin-bottom: $unit*2;
+}
+
+.cd-tile__description {
+  font-size:14px;
+  color: rgba(255,255,255,0.7);
+}

@@ -13,11 +13,18 @@ import views from './views';
 import config from './app.config';
 import routing from './app.routes';
 
+// Components
+import navbar from './components/navbar';
+import demoContainer from './components/demo-container';
+import button from './components/button';
+import tile from './components/tile';
+import loader from './components/loader';
+
 // Static
 import './static';
 
 // Styles
-import './ui/style.scss';
+import './components/style.scss';
 
 angular.module('app',
   [
@@ -25,7 +32,13 @@ angular.module('app',
     ngResource,
 
     services,
-    views
+    views,
+
+    navbar,
+    demoContainer,
+    button,
+    tile,
+    loader
   ])
 .config(config)
 .config(routing);

@@ -4,13 +4,15 @@ import uirouter from 'angular-ui-router';
 
 // Subviews
 import landing from './landing';
-import posts from './posts';
+import rss from './rss-api';
+import search from './search';
 
 export default angular.module('app.views', [
   uirouter,
 
   landing,
-  posts
+  rss,
+  search
 ])
   .name;
 

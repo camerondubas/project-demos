@@ -1,0 +1,58 @@
+.cd-navbar {
+  display: block;
+  min-height: 50px;
+  width:100%;
+  background: #3949AB;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+
+  padding: $unit*2;
+  position: fixed;
+  color: #fff;
+  z-index: 1;
+  transition: .2s background;
+}
+
+.cd-navbar__spacer {
+  height:70px;
+}
+
+
+.cd-navbar__title {
+  margin-top:3px;
+  transition: margin .3s;
+}
+
+.cd-icon__back {
+  position: absolute;
+  width:20px;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+  float: left;
+  //background: red;
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    background: white;
+    height: 2px;
+    display: block;
+  }
+
+  span:nth-of-type(1) {
+    width:60%;
+    transform: rotate(-45deg);
+    transform-origin: left top;
+  }
+
+  span:nth-of-type(2) {
+    width:100%;
+  }
+
+  span:nth-of-type(3) {
+    width:60%;
+    transform: rotate(45deg);
+    transform-origin: left bottom;
+  }
+}

@@ -3,6 +3,6 @@ export default /* @ngInject */ $stateProvider => {
   .state('app', {
     url: '/',
     abstract: true,
-    template: '<ui-view></ui-view>'
+    template: `<cd-navbar title="{{project.title || 'All Demos'}}" color="{{project.color || '#202f88'}}"></cd-navbar><ui-view></ui-view>`
   });
 };

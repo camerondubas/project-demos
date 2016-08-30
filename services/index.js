@@ -1,10 +1,12 @@
 import * as angular from 'angular';
 
 // Services
-import post from './post';
+import rss from './rssApi.service';
+import project from './project.service';
 
 export default angular.module('app.services',
   [
-    post
+    rss,
+    project
   ])
   .name;

@@ -1,0 +1,25 @@
+<cd-demo-container>
+  <h2>How It Works:</h2>
+  <p>Input a URL for any RSS Feed and receive a JSON Formatted version. It is CORS Enabled so this API can be used on strictly front-end projects without any need for server-side logic.</p>
+
+  <h2>Note:</h2>
+  <p>This demo only displays the first 10 items in a feed, however the API supports retrieving feeds in their entirety.</p>
+
+  <h2 >Sample Feeds: </h2>
+  <ul>
+    <li>http://www.feedforall.com/sample.xml</li>
+    <li>http://www.feedforall.com/sample-feed.xml</li>
+    <li>http://www.feedforall.com/blog-feed.xml</li>
+  </ul>
+
+  <form ng-submit="rssCtrl.getFeed()">
+    <div class="cd-input-group">
+      <label for="url-input">RSS Feed URL</label>
+      <input id="url-input" type="text" placeholder="Ex: http://www.feedforall.com/sample.xml" ng-model="rssCtrl.rssUrl" required>
+    </div>
+    <cd-button type="submit">Submit</cd-button>
+    <cd-loader ng-show="rssCtrl.isLoading"></cd-loader>
+  </form>
+
+  <json-tree ng-repeat="item in rssCtrl.feed | limitTo:10" object="item" start-expanded="true"></json-tree>
+</cd-demo-container>
