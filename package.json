@@ -12,6 +12,10 @@
     "type": "git",
     "url": "https://github.com/camerondubas/project-demos.git"
   },
+  "engines": {
+    "node": "6.2.2",
+    "npm": "3.3.10"
+  },
   "eslintConfig": {
     "extends": "google",
     "ecmaVersion": 6,
@@ -49,6 +53,7 @@
     "eslint": "~2.12.0",
     "eslint-config-google": "~0.6.0",
     "eslint-loader": "~1.3.0",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "~0.9.1",
     "file-loader": "~0.8.4",
     "html-loader": "~0.4.0",
