@@ -16,7 +16,7 @@ class ProjectService {
       },
       {
         title: 'Promise Buttons',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus dolorum eos est harum impedit modi. ',
+        description: 'An Angular directive that adds loading, success, and failure states to buttons that call a promise function.',
         color: '#9C27B0',
         sref: 'app.button'
       }
