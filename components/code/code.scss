@@ -1,0 +1,24 @@
+pre {
+  background: lighten($gray, 25);
+  border-radius: 1px;
+  border: 1px solid $gray;
+  font-family: monospace;
+  color: darken($gray, 25);
+}
+
+
+.cd-code-inline {
+  pre {
+    display: inline;
+    padding:0 $unit/2;
+  }
+}
+
+
+.cd-code-block {
+  pre {
+    display: block;
+    //padding: $unit;
+    margin-bottom: $unit*2  ;
+  }
+}

@@ -2,6 +2,7 @@
 
 $unit: 10px;
 $gray: #a9a9a9;
+$dark-gray: #6b6b6b;
 $shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
 $shadow-2: 0 2px 7px rgba(0, 0, 0, 0.5);
 
@@ -11,12 +12,26 @@ $accent-color: #ff4081;
 body {
   font-family: 'Roboto', sans-serif;
   background: #e8e8e8;
-  color: $gray;
+  color: $dark-gray;
 }
 
 
 p, li {
-  font-size:12px;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+a {
+  color: black;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid $dark-gray;
+  margin:$unit*2 auto;
+  width:96%;
+
+  display: block;
 }
 
 .cd-container {
@@ -31,3 +46,4 @@ p, li {
 @import "button/button";
 @import "tile/tile";
 @import "loader/loader";
+@import "code/code";

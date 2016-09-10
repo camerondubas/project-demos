@@ -13,6 +13,12 @@ class ProjectService {
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus dolorum eos est harum impedit modi. ',
         color: '#7CB342',
         sref: 'app.search'
+      },
+      {
+        title: 'Promise Buttons',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus dolorum eos est harum impedit modi. ',
+        color: '#7CB342',
+        sref: 'app.button'
       }
     ];
   }

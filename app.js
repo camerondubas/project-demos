@@ -19,6 +19,7 @@ import demoContainer from './components/demo-container';
 import button from './components/button';
 import tile from './components/tile';
 import loader from './components/loader';
+import code from './components/code';
 
 // Static
 import './static';
@@ -38,7 +39,8 @@ angular.module('app',
     demoContainer,
     button,
     tile,
-    loader
+    loader,
+    code
   ])
 .config(config)
 .config(routing);

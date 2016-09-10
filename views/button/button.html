@@ -1,0 +1,56 @@
+<cd-demo-container>
+  <h2>Angular Promise Buttons</h2>
+  <p>This directive is a re-write of <a href="https://github.com/johannesjo/angular-promise-buttons">
+    johannesjo's angular-promise-buttons directive.</a>
+    This version is slightly simplified, adds support for Success/Failure cases, and is written in ES6. Full Docs available on the
+    <a href="">GitHub Repo for this project</a>. Contributions are welcome.
+  </p>
+
+  <p>The <cd-code-inline>promise-button</cd-code-inline>
+    directive allows you to have loading states on promise
+    functions without needing to apply a boolean to that function, cluttering up controllers.
+    Instead, simply add this directive to any button and the associated promise will be
+    watched, and loading, success, and error states will be applied.
+    When a promise is invoked, the <cd-code-inline>is-loading</cd-code-inline> class is added.
+    After the promise is resolved or rejected, either the
+    <cd-code-inline>is-resolved</cd-code-inline> or <cd-code-inline>is-rejected</cd-code-inline>
+    class is appended to the button for a period of time.
+  </p>
+
+  <hr>
+  <h2>General Usage:</h2>
+
+  <p>Add <cd-code-inline>promise-button</cd-code-inline> to any element with an
+    <cd-code-inline>ng-click="somePromiseFunction()"</cd-code-inline>.
+    This promise with automatically be detected and watched.</p>
+  <cd-code-block>
+  &lt;button ng-click=&quot;somePromiseFunction()&quot; promise-button&gt;Click Me&lt;/button&gt;
+  </cd-code-block>
+
+  <p>Example:</p>
+
+  <cd-button ng-click="buttonCtrl.loadingSuccess()">Loading Then Success</cd-button>
+  <cd-button ng-click="buttonCtrl.loadingError()">Loading Then Error</cd-button>
+
+  <hr>
+  <h2>Form Usage:</h2>
+
+  <p>To use the promise buttons on a form, add the <cd-code-inline>promise-button</cd-code-inline> directive to the <cd-code-inline>form</cd-code-inline> element, alongside the <cd-code-inline>ng-submit</cd-code-inline> directive.</p>
+  <cd-code-block>
+  &lt;form ng-submit=&quot;somePromiseFunction()&quot; promise-button&gt;
+    &lt;!-- A Form with various inputs--&gt;
+    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+  </cd-code-block>
+
+  <p>Example:</p>
+
+  <form ng-submit="buttonCtrl.loadingSuccess(delay)" promise-button>
+    <div class="cd-input-group">
+      <label for="delay">Delay (milliseconds)</label>
+      <input id="delay" type="text" placeholder="How long should the promise delay?" ng-model="delay" required>
+    </div>
+
+    <cd-button type="submit">Loading Then Success</cd-button>
+  </form>
+</cd-demo-container>
